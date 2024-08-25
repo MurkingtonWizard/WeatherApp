@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/idLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/location_margin"
+        android:textSize="@dimen/location_textSize" />
+
+    <Spinner
+        android:id="@+id/idUnitSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_gravity="end" />
+
+    <GridLayout
+        android:id="@+id/idCurrentWeatherGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="130dp"
+        android:columnCount="2"
+        android:rowCount="1">
+
+        <ImageView
+            android:id="@+id/idWeatherIcon"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="8dp"
+             />
+
+        <TextView
+            android:id="@+id/idTemperature"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="100sp"
+            android:layout_marginHorizontal="8dp"/>
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/idInformationGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="305dp"
+        android:columnCount="5"
+        android:rowCount="2">
+
+        <TextView
+            android:id="@+id/idHumidityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="@dimen/informationTitle_textSize"
+            android:text="@string/humidity"/>
+
+        <TextView
+            android:id="@+id/idPrecipitationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="@dimen/informationTitle_textSize"
+            android:text="@string/precipitation"/>
+
+        <TextView
+            android:id="@+id/idPressureTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="@dimen/informationTitle_textSize"
+            android:text="@string/pressure"/>
+
+
+        <TextView
+            android:id="@+id/idHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="@dimen/informationTitle_textSize"/>
+
+        <TextView
+            android:id="@+id/idPrecipitation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="@dimen/informationTitle_textSize"/>
+
+        <TextView
+            android:id="@+id/idPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="@dimen/informationTitle_textSize"/>
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/idSunGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="375dp"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <TextView
+            android:id="@+id/idSunriseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="@dimen/informationTitle_textSize"
+            android:text="@string/sunrise"/>
+
+        <TextView
+            android:id="@+id/idSunsetTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="@dimen/informationTitle_textSize"
+            android:text="@string/sunset"/>
+
+        <TextView
+            android:id="@+id/idSunrise"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="@dimen/informationTitle_textSize"/>
+
+        <TextView
+            android:id="@+id/idSunset"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="@dimen/informationTitle_textSize"/>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/idForecast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="465dp"
+        android:textSize="25sp"
+        android:text="@string/forecastTitle"/>
+
+    <GridLayout
+        android:id="@+id/idForecastGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:columnCount="7"
+        android:rowCount="3">
+
+        <TextView
+            android:id="@+id/idTodayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:text="@string/today"/>
+
+        <ImageView
+            android:id="@+id/idTodayIcon"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/idTodayTemps"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/idDay1Title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/idDay1Icon"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/idDay1Temps"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/idDay2Title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/idDay2Icon"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/idDay2Temps"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/idDay3Title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/idDay3Icon"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/idDay3Temps"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/idDay4Title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/idDay4Icon"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:layout_row="1"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/idDay4Temps"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="2"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/idDay5Title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="5"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/idDay5Icon"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:layout_row="1"
+            android:layout_column="5"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/idDay5Temps"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="2"
+            android:layout_column="5"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/idDay6Title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="6"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/idDay6Icon"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:layout_row="1"
+            android:layout_column="6"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/idDay6Temps"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="2"
+            android:layout_column="6"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+    </GridLayout>
+
+</FrameLayout>

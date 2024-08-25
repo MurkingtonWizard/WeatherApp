@@ -1,0 +1,11 @@
+<resources>
+    <!-- MainActivity -->
+    <string name="app_name">CS 4518: Weather App</string>
+    <string name="humidity">Humidity</string>
+    <string name="pressure">Pressure</string>
+    <string name="precipitation">Precipitation</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="forecastTitle">7 Day Forecast</string>
+    <string name="today">Today</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Weather Background Colors -->
+    <!-- https://teamtreehouse.com/community/changing-the-background-color-depending-on-weather-build-a-weather-app -->
+    <color name="clear_day">#FFB300</color>
+    <color name="clear_night">#121735</color>
+    <color name="rain">#3C424C</color>
+    <color name="snow">#EDEFF3</color>
+    <color name="sleet">#B8B8B8</color>
+    <color name="fog">#D3D2D3</color>
+    <color name="cloudy">#C9CACA</color>
+    <color name="partly_cloudy_day">#E8F3F7</color>
+    <color name="partly_cloudy_night">#7F706C</color>
+
+    <!-- Our own colors -->
+    <color name="blue">#0D6EFD</color>
+    <color name="indigo">#6610F2</color>
+    <color name="purple">#6F42C1</color>
+    <color name="pink">#D63384</color>
+    <color name="red">#DC3545</color>
+    <color name="orange">#FD7E14</color>
+    <color name="yellow">#FFC107</color>
+    <color name="green">#198754</color>
+    <color name="teal">#29C997</color>
+    <color name="cyan">#0DCAF0</color>
+    <color name="gray">#ADB5BD</color>
+
+    <color name="wpi_red">#AC2B37</color>
+    <color name="wpi_gray">#A9B0B7</color>
+</resources>
